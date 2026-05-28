@@ -1049,6 +1049,37 @@ details p {
   list-style: none;
 }
 
+.contact-highlight {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.contact-highlight a {
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-warm);
+  color: var(--ink);
+}
+
+.contact-highlight a:hover {
+  border-color: var(--accent);
+}
+
+.contact-highlight strong,
+.contact-highlight span {
+  display: block;
+}
+
+.contact-highlight span {
+  color: var(--primary-dark);
+  font-weight: 900;
+}
+
 .contact-list li {
   display: grid;
   grid-template-columns: 90px 1fr;
@@ -1289,5 +1320,9 @@ details p {
   .contact-list li {
     grid-template-columns: 1fr;
     gap: 4px;
+  }
+
+  .contact-highlight {
+    grid-template-columns: 1fr;
   }
 }
